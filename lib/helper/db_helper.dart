@@ -23,7 +23,7 @@ class DatabaseHelper {
   Future<Database> _initDb() async {
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, "student.db");
-    print("Database path: $path");
+    // print("Database path: $path");
 
     return await openDatabase(
       path,
@@ -31,7 +31,7 @@ class DatabaseHelper {
       onCreate: (db, version) {
         db.execute(
             "CREATE TABLE $studentsTable($colId INTEGER PRIMARY KEY AUTOINCREMENT, $colName TEXT, $colAge INTEGER)");
-       print("Table Created");
+      //  print("Table Created");
       },
     );
   }

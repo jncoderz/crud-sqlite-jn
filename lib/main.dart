@@ -5,7 +5,7 @@ import 'package:sqlite_test/screens/home_screen.dart';
 
 void main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
-   DatabaseHelper.instance.db;
+   DatabaseHelper.instance.getStudentsMapList();
   runApp(MyApp());
 }
 
